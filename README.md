@@ -1,12 +1,9 @@
 # watchCache "stuck high after burst" reproducer
 
 Reproduces the upstream kube-apiserver watchCache bug we identified during
-the kcp memory investigation (see
-[`../memory-test-fix-3/PLAN.md`](../memory-test-fix-3/PLAN.md) for the
-full chain of evidence). The bug is **not kcp-specific** — it lives in
+the memory investigation. The bug lives in
 `staging/src/k8s.io/apiserver/pkg/storage/cacher/watch_cache.go` upstream.
-This repro runs on a vanilla kind cluster and shows the behavior with no
-kcp components in the picture.
+This repro runs on a vanilla kind cluster and shows the behavior.
 
 ## The bug
 
